@@ -17,7 +17,7 @@ if person:
 client = boto3.client('sns')
 for secret_santa in secret_santas:
     print(f"sending secret santa to {secret_santa['santa']}")
-    sms_message = f"Your secret santa for Christmas this year is {secret_santa['reciever']}"
+    sms_message = f"Your secret santa for Christmas this year is {secret_santa['receiver']}"
     client.publish(
         PhoneNumber=secret_santa['number'], 
         Message=sms_message, 
